@@ -1,109 +1,81 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #000; /* Default theme: dark */
+    background-color: #000;
     color: #fff;
-    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth theme transition */
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 #app {
-    padding-bottom: 60px; /* Space for the bottom nav */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.section {
-    display: none;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.active {
-    display: block;
-    opacity: 1;
-}
-
-.logo {
-    width: 100px;
-    display: block;
-    margin: 0 auto 20px;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
+#nav {
+    margin-top: 20px;
     width: 100%;
-    background-color: #111;
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
-    border-top: 1px solid #fff;
 }
 
-.bottom-nav button {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.bottom-nav button:hover {
-    color: #ccc;
-}
-
-#theme-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-}
-
-#theme-toggle button {
+#nav button {
+    flex: 1;
+    margin: 0 5px;
     padding: 10px;
-    background-color: #111;
+    background-color: #333;
     color: #fff;
-    border: 1px solid #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#nav button:hover {
+    background-color: #555;
+}
+
+#dora-img {
+    width: 80%;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+.page {
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#launch-page input {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#launch-page button {
+    padding: 10px 20px;
+    background-color: #444;
+    color: #fff;
+    border: none;
     cursor: pointer;
 }
 
-#theme-toggle button:hover {
-    background-color: #444;
+#launch-page button:hover {
+    background-color: #666;
 }
 
-/* Animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+#launch-message {
+    margin-top: 20px;
 }
 
-/* Light Theme */
-body.light {
-    background-color: #fff;
-    color: #000;
+#open-info {
+    margin-top: 20px;
 }
 
-body.light .bottom-nav {
-    background-color: #eee;
-}
-
-body.light .bottom-nav button {
-    color: #000;
-}
-
-body.light .bottom-nav button:hover {
-    color: #555;
-}
-
-body.light #theme-toggle button {
-    background-color: #ddd;
-    color: #000;
-}
-
-body.light #theme-toggle button:hover {
-    background-color: #bbb;
-}

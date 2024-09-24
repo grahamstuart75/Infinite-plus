@@ -3,81 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infinite+</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div id="theme-toggle">
-        <button id="toggleTheme">Switch Theme</button>
-    </div>
-    <div id="app">
-        <!-- Home Section -->
-        <div id="home" class="section active fade-in">
-            <img src="logo.png" alt="App Logo" class="logo">
-            <h1>Home</h1>
-            <div id="last-activity">
-                <h2>Last Activity</h2>
-                <img src="1image.png" alt="Image 1" id="image1">
-                <img src="2image.png" alt="Image 2" id="image2">
-                <p>This App is Helpful for you. Send Feedback to <a href="mailto:grahamstuart93876@gmail.com">grahamstuart93876@gmail.com</a></p>
-                <p>Any report or enquiry sent report to <a href="https://www.instagram.com/grahamstuart_7_5">@grahamstuart_7_5</a> Instagram account.</p>
+<body class="light-theme" id="body">
+    <header>
+        <h1>Welcome ⚡ To Our App</h1>
+        <div class="theme-toggle">
+            <label for="themeSelect">Theme:</label>
+            <select id="themeSelect">
+                <option value="light">Day</option>
+                <option value="dark">Night</option>
+                <option value="custom">Custom</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section id="homeSection">
+            <h2>Last Activity</h2>
+            <img src="homework.png" alt="Homework Image" />
+        </section>
+
+        <section id="questionPaperSection">
+            <h2>Welcome to our question paper section</h2>
+            <p>This section has recent exam model and original Question Paper</p>
+
+            <button id="modelButton">Model Question Paper</button>
+            <button id="originalButton">Original Question Paper</button>
+
+            <div id="modelPapers" class="paperSection">
+                <h3>Model Question Paper</h3>
+                <ul>
+                    <li><a href="modeltamilquestion.pdf" target="_blank">Tamil</a></li>
+                    <li><a href="modelenglishquestion.pdf" target="_blank">English</a></li>
+                    <li><a href="modelmathquetion.pdf" target="_blank">Math</a></li>
+                    <li><a href="modelsocialquestion.pdf" target="_blank">Social</a></li>
+                    <li><a href="modelscience.pdf" target="_blank">Science</a></li>
+                    <li><a href="#">Computer (Coming soon)</a></li>
+                </ul>
+                <p>If any issues, contact <a href="mailto:grahamstuart93876@gmail.com">grahamstuart93876@gmail.com</a></p>
             </div>
-        </div>
 
-        <!-- Question Paper Section -->
-        <div id="question-paper" class="section fade-in">
-            <img src="questionpaperlogo.png" alt="Question Paper Logo" class="logo">
-            <h1>Question Paper</h1>
-            <ul>
-                <li><a href="tamilquestion.pdf" target="_blank">Tamil</a></li>
-                <li><a href="englishquestion.pdf" target="_blank">English</a></li>
-                <li><a href="mathquestion.pdf" target="_blank">Math</a></li>
-                <li><a href="sciencequestion.pdf" target="_blank">Science</a></li>
-                <li><a href="socialquestion.pdf" target="_blank">Social</a></li>
-            </ul>
-            <button id="noteButton">Note</button>
-            <div id="note" class="hidden">
-                <p><strong>*Note*</strong> This App Will Load Current Exam Question Paper. It does not load previous or old question papers. All source copyrights owned by ©DVK, ©Infinite Developer, ©Infinite+, ©Infinite, ©Padasalai, ©9K Studios, ©GS. Additional Samples From Youtube.com.</p>
+            <div id="originalPapers" class="paperSection">
+                <h3>Original Question Paper</h3>
+                <ul>
+                    <li><a href="tamil.pdf" target="_blank">Tamil</a></li>
+                    <li><a href="english.pdf" target="_blank">English</a></li>
+                    <li><a href="math.pdf" target="_blank">Math</a></li>
+                    <li><a href="science.pdf" target="_blank">Science</a></li>
+                    <li><a href="social.pdf" target="_blank">Social</a></li>
+                </ul>
             </div>
-        </div>
+        </section>
 
-        <!-- Guide Section -->
-        <div id="guide" class="section fade-in">
-            <img src="guidelogo.png" alt="Guide Logo" class="logo">
-            <h1>Guide</h1>
-            <ul>
-                <li><a href="tamilguide.pdf" target="_blank">Tamil</a></li>
-                <li><a href="englishguide.pdf" target="_blank">English</a></li>
-                <li><a href="mathguide.pdf" target="_blank">Math</a></li>
-                <li><a href="scienceguide.pdf" target="_blank">Science</a></li>
-                <li><a href="socialguide.pdf" target="_blank">Social</a></li>
-                <li><a href="computerguide.pdf" target="_blank">Computer</a></li>
-            </ul>
-        </div>
-
-        <!-- About Section -->
-        <div id="about" class="section fade-in">
-            <img src="aboutlogo.png" alt="About Logo" class="logo">
-            <h1>About</h1>
-            <div id="videos">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/video1" frameborder="0" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/video2" frameborder="0" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/video3" frameborder="0" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/video4" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <p>For Any Specific Information Send Mail to <a href="mailto:grahamstuart93876@gmail.com">grahamstuart93876@gmail.com</a> or Join in Discord Group *Coming Soon*</p>
-            <p>Discover More Apps: <a href="#">See Updates</a></p>
-            <p>Official Copyrights Owned By ©DVK, ©Infinite Developer, ©Infinite+, Special Thanks to DVK, Apple Intelligence, Our Developers. The End.</p>
-        </div>
-
-        <!-- Bottom Navigation -->
-        <div class="bottom-nav">
-            <button onclick="showSection('home')">Home</button>
-            <button onclick="showSection('question-paper')">Question Paper</button>
-            <button onclick="showSection('guide')">Guide</button>
-            <button onclick="showSection('about')">About</button>
-        </div>
-    </div>
+        <section id="chatSection">
+            <h2>Chat</h2>
+            <div id="chatBox"></div>
+            <input type="text" id="chatInput" placeholder="Enter your message...">
+            <button id="sendButton">Send</button>
+        </section>
+    </main>
 
     <script src="app.js"></script>
 </body>
